@@ -112,6 +112,14 @@ a {
 .nav-icon {
     font-size: 1rem;
     padding-top: 0.3em;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-icon a {
+  height: 32px;
 }
 
 .nav-icon:active {
@@ -372,12 +380,27 @@ a {
 	margin: 0;
 }
 
-footer .home .active {
+footer .nav-icon.home.active {
   background-color: #E889B9;
 }
-footer .list .active {
+footer .nav-icon.list.active {
   background-color: #F8D26D;
 }
-footer .profile .active {
+footer .nav-icon.profile.active {
   background-color: #BBD534;
+}
+footer svg path,
+footer svg g {
+  stroke: #000;
+}
+footer .active svg path,
+footer .active svg g {
+  stroke: #FFF;
+}
+footer ul {
+  height: 100%;
+}
+footer svg {
+  /* width: 32px;
+  height: 32px; */
 }

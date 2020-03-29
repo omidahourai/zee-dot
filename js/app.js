@@ -1,9 +1,9 @@
 
-
 $(()=>{
   // check login status
   checkUserId();
-
+  // remove transition fade
+  $.mobile.defaultPageTransition = 'none'
   // from https://api.jquerymobile.com/jquery.mobile.navigate/
   // route each link click through jQ mobile navigate.
   $('a').on('click', function(e) {
@@ -28,9 +28,9 @@ $(()=>{
     $('footer li a').each(function(e) {
       const hash = $(this).attr('href').split('#')[1]
       if (hash === windowHash) {
-        $(this).addClass('active')
+        $(this).parent().addClass('active')
       } else {
-        $(this).removeClass('active')
+        $(this).parent().removeClass('active')
       }
     })
   });

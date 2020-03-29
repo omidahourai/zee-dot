@@ -2,7 +2,8 @@
 $(()=>{
   // check login status
   checkUserId();
-
+  // remove transition fade
+  $.mobile.defaultPageTransition = 'none'
   // from https://api.jquerymobile.com/jquery.mobile.navigate/
   // route each link click through jQ mobile navigate.
   $('a').on('click', function(e) {

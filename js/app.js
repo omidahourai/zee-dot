@@ -1,5 +1,4 @@
 
-
 $(()=>{
   // check login status
   checkUserId();
@@ -28,9 +27,9 @@ $(()=>{
     $('footer li a').each(function(e) {
       const hash = $(this).attr('href').split('#')[1]
       if (hash === windowHash) {
-        $(this).addClass('active')
+        $(this).parent().addClass('active')
       } else {
-        $(this).removeClass('active')
+        $(this).parent().removeClass('active')
       }
     })
   });

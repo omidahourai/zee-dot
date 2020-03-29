@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dots</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="lib/js/jquery-2.2.4.min.js"></script>
+	<script src="js/login.js"></script>
+	<script src="js/app.js"></script>
+	
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+
+	<link rel="stylesheet" href="https://use.typekit.net/swu1lku.css">
+
+
+
+
+</head>
+
+
+<body>
+
+
+/* Login / Sign up / Forget password Page */
+
+	<section data-role="page" id="login-page">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="logo">
+				<img src="img/dots/Logos/logo.svg">
+			</div>
+			<div class="flex-stretch"></div>
+			<div class="flex-none">
+				<form id="login-form" data-ajax="false" style="padding:1em">
+					<div class="form-control">
+						<label class="form-label" for="login-username">Username</label>
+						<input class="form-input" type="text" placeholder="Type your Username" data-role="none" id="login-username">
+					</div>
+					<div class="form-control">
+						<label class="form-label" for="login-password">Password</label>
+						<input class="form-input" type="password" placeholder="Type your Password" data-role="none" id="login-password">
+					</div> 
+					<div class="form-control">
+						<input type="submit" class="form-button" value="Login" data-role="none" />
+					</div>
+					<div class="form-control text-center" style="margin:1em 0">
+						<a href="#signup-page"><small>Sign Up</small></a>
+					</div>
+				</form>
+			</div>
+		</div>
+		</div>
+	</section >
+
+
+	<section data-role="page" id="signup-page">
+		<div data-role="main">
+			<form id="signup-form">
+				<div class="form-control">
+					<label class="form-label" for="signup-username">Username</label>
+					<input class="form-input" type="text" placeholder="Type your Username" data-role="none" id="signup-username">
+				</div>
+				<div class="form-control">
+					<label class="form-label" for="signup-password">Password</label>
+					<input class="form-input" type="password" placeholder="Type your Password" data-role="none" id="signup-password">
+				</div>
+				<div class="form-control">
+					<label class="form-label" for="signup-password2">Password Again</label>
+					<input class="form-input" type="password" placeholder="Type your Password" data-role="none" id="signup-password2">
+				</div>
+				<div class="form-control">
+					<a href="#recent-page" class="form-button">Signup</a>
+				</div>
+				<div class="form-control text-center" style="margin:1em 0">
+					<a href="#login-page"><small>Login</small></a>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+/* Home page (Map page) */
+
+	<section data-role="page" id="home-page">
+		<div data-role="main">
+
+			<div class="nav-air circle one">
+				<a href="#"></a>
+			</div>
+			<div class="nav-air circle two">
+				<a href="#"></a>
+			</div>
+			<div class="nav-air circle three">
+				<a href="#"></a>
+			</div>
+			<div class="nav-air circle four">
+				<a href="#"></a>
+			</div>
+
+			<div class="nav-air">
+					<a href="#list-page" class="cta-button">Make a dot</a>
+				</div>
+			
+		</div>
+		<footer data-role="footer" data-template="#footer-nav-template"></footer>
+	</section>
+
+
+
+/* List Page */
+
+	<section data-role="page" id="list-page">
+		<div data-role="main">
+			<div class="scrollable">
+				<a href="#mood-page"><img src="img/dots/Graphics/mood-10.svg">
+				</a>
+				<img src="img/dots/Graphics/mood-11.svg">
+				<img src="img/dots/Graphics/mood-12.svg">
+				<img src="img/dots/Graphics/mood-13.svg">
+				<img src="img/dots/Graphics/mood-14.svg">
+				<img src="img/dots/Graphics/mood-15.svg">
+				<img src="img/dots/Graphics/mood-16.svg">
+				<img src="img/dots/Graphics/mood-17.svg">
+			</div>
+		</div>
+
+		<div class="nav-air circle">
+				<a href="#addnew-page">+</a>
+		</div>
+
+		<footer data-role="footer" data-template="#footer-nav-template"></footer>
+
+	</section>
+
+
+	
+/* Mood Page */
+
+	<section data-role="page" id="mood-page">
+		<header data-role="header">
+			<ul>
+				<li class="flex-none">
+					<a href="#list-page">back</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#moodedit-page">Edit</a>
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<img src="img/dots/Graphics/mood-10.svg">
+	
+				<h1>Mood Name</h1>
+				<p>This is the description of the mood, of the cat. He swag.</p>
+
+	
+			<div class="cta-button">
+					<a href="#home-page">Pin this mood</a>
+				</div>
+		</div>
+	</section>
+
+
+
+/* Add new page */
+
+<section data-role="page" id="addnew-page">
+		<header data-role="header">
+			<ul>
+				<li class="flex-none">
+					<a href="#list-page">back</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<img src="img/dots/Graphics/mood-10.svg">
+			<form>
+				<input type="text" placeholder="Mood Name" data-role="none">
+				<input type="text" placeholder="This is the description of the mood, of the cat. He swag." data-role="none">
+
+			</form>
+			<div class="cta-button">
+					<a href="#list-page">Add this mood</a>
+				</div>
+		</div>
+</section>
+
+
+
+/* Add mood page */
+
+<section data-role="page" id="addmood-page">
+		<header data-role="header">
+			<h1>Add Mood</h1>
+			<ul>
+				<li class="flex-none">
+					<a href="#list-page">back</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#mood-page">Add</a>
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<img src="img/placeholder.png">
+			<form>
+				<input type="text" placeholder="Mood Name" data-role="none">
+				<input type="text" placeholder="This is the description of the mood, of the cat. He swag." data-role="none">
+
+			</form>
+			<div class="cta-button">
+					<a href="#home-page">Pin this mood</a>
+				</div>
+		</div>
+</section>
+
+
+
+/* Mood edit page */
+
+	<section data-role="page" id="moodedit-page">
+		<header data-role="header">
+			<ul>
+				<li class="flex-none">
+					<a href="#list-page">back</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<img src="img/dots/Graphics/mood-10.svg">
+			<form>
+				<input type="text" placeholder="Mood Name" data-role="none">
+				<input type="text" placeholder="This is the description of the mood, of the cat. He swag." data-role="none">
+
+			</form>
+			<div class="cta-button">
+					<a href="#list-page">Done</a>
+				</div>
+		</div>
+	</section>
+
+
+
+/* Profile page */
+
+	<section data-role="page" id="profile-page">
+		<header data-role="header">
+			<ul>
+				<li class="flex-none">
+					<a href="#home-page" data-rel="back">back</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#profile-edit-page">Edit</a>
+				</li>
+			</ul>
+		</header>
+
+		<div data-role="main">
+			<img src="img/placeholder.png">
+			<h1>Name</h1>
+			<P>Age</P>
+			<p>Location</p>
+			<p>And such</p>
+			<p>This is the description of the cat. He swag.</p>
+	
+		</div>
+		<div class="cta-button">
+			<a href="#login-page">Log Out</a>
+		</div>
+		<footer data-role="footer" data-template="#footer-nav-template"></footer>
+	</section>
+
+
+
+/* Profile edit page */
+
+	<section data-role="page" id="profile-edit-page">
+		<header data-role="header">
+			<ul>
+				<li class="flex-none">
+					<a href="#profile-page">back</a>
+				</li>
+				<li class="flex-stretch"></li>
+				<li class="flex-none">
+					<a href="#profile-page">Done</a>
+				</li>
+			</ul>
+		</header>
+		<div data-role="main">
+			<img src="img/placeholder.png">
+
+			<form>
+				<input type="text" placeholder="Name" data-role="none">
+				<input type="text" placeholder="Age" data-role="none">
+				<input type="text" placeholder="And Such" data-role="none">
+				<input type="text" placeholder="This is the description of the cat. He swag." data-role="none">
+			</form>
+		</div>
+	</section>
+
+
+	<script type="text/template" id="footer-nav-template">
+	<ul>
+		<li><a href="#home-page">
+			<div class="nav-icon" id="home-nav"><img src="img/dots/Icons/icon-09.svg" alt=""></div>
+		</a></li>
+			
+		<li><a href="#list-page">
+			<div class="nav-icon" id="list-nav"><img src="img/dots/Icons/icon-08.svg" alt=""></div>
+		</a></li>
+
+		<li><a href="#profile-page">
+			<div class="nav-icon" id="profile-nav"><img src="img/dots/Icons/icon-07.svg" alt=""></div>
+		</a></li>
+	</ul>
+	</script>
+
+
+	
+	
+</body>
+</html>

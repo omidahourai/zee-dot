@@ -1,56 +1,37 @@
 
 
 $(()=>{
+  // check login status
+  checkUserId();
 
-	checkUserId();
+  // from https://api.jquerymobile.com/jquery.mobile.navigate/
+  // route each link click through jQ mobile navigate.
+  $('a').on('click', function(e) {
+    e.preventDefault();
+    if ($(this).attr('data-action') === 'log-out') {
+      sessionStorage.clear() // clear session on logout
+    }
+    $.mobile.navigate( $(this).attr( "href" ));
+  });
 
-	//Event Delegation
-	$(document)
-
-	.on("submit","#login-form",function(e){
-
+  // listen for event on login form submit.
+  // check the fields and save a new session if successful.
+	$(document).on('submit', '#login-form', function(e){
 		e.preventDefault();
-
-		checkLoginForm ();
-
-
+		checkLoginForm();
 	})
 
-	
-
-		/* DATA ACTIVATE */
-	.on("click","[data-activate]",function(e){
-		$($(this).data("activate"))
-			.addClass("active");
-	})
-	.on("click","[data-deactivate]",function(e){
-		$($(this).data("deactivate"))
-			.removeClass("active");
-	})
-	.on("click","[data-toggle]",function(e){
-		$($(this).data("toggle"))
-			.toggleClass("active");
-	})
-	.on("click","[data-activateone]",function(e){
-		$($(this).data("activateone"))
-			.addClass("active")
-			.siblings().removeClass("active");
-	})
-
-
-
-
-
-
-
-
-		$("[data-template]").each(function(){
-		let template_id = $(this).data("template");
-		let template_str = $(template_id).html();
-		$(this).html(template_str);
-	})
-
-
-
-
+  // listen for navigation and color footer icons
+  // based on the hash in the address bar.
+  $(window).on('navigate', function(e) {
+    const windowHash = window.location.hash.split('#')[1]
+    $('footer li a').each(function(e) {
+      const hash = $(this).attr('href').split('#')[1]
+      if (hash === windowHash) {
+        $(this).addClass('active')
+      } else {
+        $(this).removeClass('active')
+      }
+    })
+  });
 })

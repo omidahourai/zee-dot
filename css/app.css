@@ -358,7 +358,6 @@ a {
 
 #profile-page .cta-button {
 	margin:auto;
-	position: relative;
 	bottom: 10%; 
 }
 
@@ -373,7 +372,12 @@ a {
 	margin: 0;
 }
 
-
-
-
-
+footer .home .active {
+  background-color: #E889B9;
+}
+footer .list .active {
+  background-color: #F8D26D;
+}
+footer .profile .active {
+  background-color: #BBD534;
+}
